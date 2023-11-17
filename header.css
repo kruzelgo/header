@@ -1,0 +1,16 @@
+.header-container {
+  margin: 0 auto;
+  height: 28px;
+}
+.header-logo {
+  color: #111;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  font-style: italic;
+}
+.header-logo-choco {
+  font-style: normal;
+}
