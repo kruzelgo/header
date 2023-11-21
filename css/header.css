@@ -82,7 +82,7 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 40px;
-  background-color: var(--modal-background);
+  background-color: #1e1823;
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -105,19 +105,81 @@ close-menu {
   min-width: 24px;
 }
 .header-mobile-navigation {
+  padding: 0;
 }
 .header-mobile-nav-list {
 }
 .header-nav-li-mobile {
 }
 .header-nav-link-menu {
+  display: inline-block;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.14;
+  padding-top: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.header-nav-link-menu:hover,
+.header-nav-link-menu:focus {
+  color: #fd9222;
+}
+
+.header-link-underline {
+  position: relative;
+  color: #fd9222;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 0px;
+  background-color: #fd9222;
+  border-bottom: 2px;
+  border-radius: 2px;
+  width: 24px;
+  display: block;
+}
+
 .header-mobile-sm-list {
 }
 .header-mobile-icon {
 }
 
 .header-sm-mobile-link {
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .header-mobile-nav-list {
+  gap: 0;
+  justify-content: start;
+  max-width: 200px;
+}
+
+.menu-container .address {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.header-mobile-sm-list {
+  display: flex;
+  gap: 56px;
+}
+
+.address-link-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
 }
 /* ================================================= TABLET 👇 ========================================= */
 @media screen and (min-width: 768px) {
